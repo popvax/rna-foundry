@@ -8,12 +8,17 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <Dna className="h-6 w-6 text-primary" />
+        <div className="flex items-center gap-6">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
+              <div className="inline-block rounded-lg bg-primary/10 p-3">
+                <Dna className="h-6 w-6 text-primary" />
+              </div>
               <span className="text-xl font-bold">RNA Foundry</span>
-            </Link>
-          </div>
+            </div>
+          </Link>
+        </div>
+
           <div className="flex items-center gap-4">
             <Button>Get started</Button>
           </div>
