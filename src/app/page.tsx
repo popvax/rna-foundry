@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Dna, ChevronRight } from "lucide-react"
-import Image from "next/image"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Dna, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,15 +13,6 @@ export default function Home() {
               <Dna className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold">RNA Foundry</span>
             </Link>
-            <nav className="hidden md:flex items-center gap-6">
-              <Link href="/products" className="text-sm font-medium hover:text-primary">
-                Products <ChevronRight className="inline h-4 w-4" />
-              </Link>
-              <Link href="/solutions" className="text-sm font-medium hover:text-primary">
-                Solutions <ChevronRight className="inline h-4 w-4" />
-              </Link>
-            </nav>
-
           </div>
           <div className="flex items-center gap-4">
             <Button>Get started</Button>
@@ -29,46 +20,20 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="border-b">
-        <div className="container flex items-center py-4">
-          <div className="flex items-center gap-2">
-            <div className="bg-primary/10 p-2 rounded-md">
-              <Dna className="h-6 w-6 text-primary" />
-            </div>
-            <span className="text-xl font-medium">Synthesis</span>
-          </div>
-          <nav className="ml-auto flex gap-6">
-            <Link href="#" className="text-sm font-medium hover:text-primary">
-              Overview
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary">
-              Guides
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-primary">
-              Docs
-            </Link>
-          </nav>
-        </div>
-      </div>
-
       <main className="flex-1">
+        {/* First Section: Image on the Right */}
         <section className="relative overflow-hidden">
           <div className="container relative z-10 py-16 md:py-24 lg:py-32">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                  Accelerate your RNA therapeutics
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-5xl">
+                  Give us a sequence, and we’ll take care of everything else
                 </h1>
                 <p className="max-w-[600px] text-xl text-muted-foreground">
-                The RNA Foundry works with researchers & biotechs to take their new mRNA biomedicines to clinical trial readiness end-to-end using PopVax’s mRNA-LNP and GMP platforms, starting with just the RNA sequence and ending with a Phase I-ready GMP batch of clinical doses,  in 2 years.
+                  The RNA Foundry works with researchers & biotechs to take their new mRNA biomedicines to clinical trial readiness end-to-end using PopVax’s mRNA-LNP and GMP platforms, starting with just the RNA sequence and ending with a Phase I-ready GMP batch of clinical doses, in 2 years.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button size="lg" className="w-full sm:w-auto">
-                    Start your project
-                  </Button>
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                    Talk to an expert
-                  </Button>
+                  {/* Add buttons or other content here if needed */}
                 </div>
               </div>
               <div className="relative hidden lg:block">
@@ -85,87 +50,22 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent -skew-y-6 transform-gpu z-0 translate-y-1/3" />
         </section>
 
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <div className="mb-12">
-              <h2 className="text-lg font-medium text-primary">Why RNA Foundry?</h2>
-              <h3 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Give us a sequence, and we’ll take care of everything else</h3>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="bg-card rounded-lg p-6 shadow-sm">
-                <div className="mb-4 rounded-full bg-primary/10 p-3 w-fit">
-                  <svg
-                    className="h-6 w-6 text-primary"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h4 className="text-xl font-bold">Rapid Turnaround</h4>
-                <p className="mt-2 text-muted-foreground">
-                  End-to-end mRNA-LNP platform [UTRS, codon optimization, LNPs] that we can license for global use
-                </p>
-              </div>
-
-              <div className="bg-card rounded-lg p-6 shadow-sm">
-                <div className="mb-4 rounded-full bg-primary/10 p-3 w-fit">
-                  <svg
-                    className="h-6 w-6 text-primary"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </div>
-                <h4 className="text-xl font-bold">GMP Compliant</h4>
-                <p className="mt-2 text-muted-foreground">
-                  Deep expertise in toxicity and biodistribution studies for mRNA-LNP products
-                </p>
-              </div>
-
-              <div className="bg-card rounded-lg p-6 shadow-sm">
-                <div className="mb-4 rounded-full bg-primary/10 p-3 w-fit">
-                  <svg
-                    className="h-6 w-6 text-primary"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                    />
-                  </svg>
-                </div>
-                <h4 className="text-xl font-bold">Seamless Scaling</h4>
-                <p className="mt-2 text-muted-foreground">
-                  Fast-turnaround Phase I-appropriate GMP process and facility, with all key analytical methods set up at our in-house QC release lab
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-24 bg-muted">
+        {/* Second Section: Image on the Left */}
+        <section className="py-16 md:py-24 bg-white">
           <div className="container">
             <div className="grid gap-12 lg:grid-cols-2">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                  End-to-end RNA manufacturing solutions
+                  mRNA Engineering
                 </h2>
                 <div className="space-y-6">
                   <div className="flex gap-4">
@@ -181,11 +81,44 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold">mRNA Synthesis</h3>
-                      <p className="text-muted-foreground mt-1">
-                        Custom mRNA production with optimized 5' caps, coding sequences, and poly-A tails for maximum
-                        expression.
-                      </p>
+                      <h3 className="text-xl text-muted-foreground">
+                        Design of the mRNA molecule, including untranslated regions (UTRs), signal sequences, and codon optimization, to enhance translation efficiency, stability, localization, and functional expression of the encoded protein.
+                      </h3>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Third Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Advanced Lipid Innovations
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        We have designed over 600 ionizable lipids, with 80+ successfully tested in vivo. Our leading LNP formulation, based on our novel ionizable lipid, matches market-leading formulations in rodents for mRNA vaccine delivery with equivalent safety.
+                      </h3>
                     </div>
                   </div>
 
@@ -202,10 +135,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold">LNP Formulation</h3>
-                      <p className="text-muted-foreground mt-1">
-                        Diverse ionizable lipid library with advanced lipid nanoparticle encapsulation for optimal delivery and cellular uptake.
-                      </p>
+                      <h3 className="text-xl text-muted-foreground">Our dedicated GMP Chemistry facility, equipped with an ISO 7/8 cleanroom, enables gram-scale production of ionizable lipids at 95%+ purity via HPLC-CAD. Our thermostable mRNA vaccine formulations are supported by a $1.15M grant from the Gates Foundation.</h3>
                     </div>
                   </div>
 
@@ -222,15 +152,11 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold">Complete Quality Control</h3>
-                      <p className="text-muted-foreground mt-1">
-                        Validated assays for every critical parameter from pDNA to mRNA-LNP to the final drug product. 
-                      </p>
+                      <h3 className="text-xl text-muted-foreground">Dr. Maunish Barvalia, our VP of Platform Technologies and Head of Immunology & Nucleic Acid Delivery, holds a PhD in Microbiology and Immunology (UBC). He has collaborated with Dr. Pieter Cullis at UBC and NanoVation Therapeutics on LNP-based immune cell targeting.</h3>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div className="relative">
                 <Image
                   src="/placeholder.svg?height=500&width=600"
@@ -244,149 +170,416 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
-          <div className="container text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Trusted by leading biotech companies</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-70">
-              <Image src="/placeholder.svg?height=60&width=160" width={160} height={60} alt="Client logo" />
-              <Image src="/placeholder.svg?height=60&width=160" width={160} height={60} alt="Client logo" />
-              <Image src="/placeholder.svg?height=60&width=160" width={160} height={60} alt="Client logo" />
-              <Image src="/placeholder.svg?height=60&width=160" width={160} height={60} alt="Client logo" />
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-24 bg-primary/5">
+        {/* Fourth section: Image on the Left */}
+        <section className="py-16 md:py-24 bg-white">
           <div className="container">
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Ready to accelerate your RNA development?
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Our team of experts is ready to help you bring your RNA therapeutics to life.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">Start your project</Button>
-              <Button size="lg" variant="outline">
-                Schedule a consultation
-              </Button>
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Custom mRNA-LNP Formulation
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        With your sequence and our optimized mRNA architecture, we can formulate mRNA-LNP using our proprietary ionizable lipid and provide samples for critical functional validation.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-      </main>
 
-      <footer className="border-t py-12">
-        <div className="container">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Dna className="h-6 w-6 text-primary" />
-                <span className="text-xl font-bold">RNA Foundry</span>
+        {/* fifth Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Toxicology & Biodistribution Expertise
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        Leveraging our expertise, we will design and conduct toxicology and biodistribution studies for mRNA-LNPs in collaboration with trusted CROs, while you perform functional assays at your end.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Accelerating RNA therapeutics from discovery to clinic with cutting-edge CDMO services.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Products</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    mRNA Synthesis
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    LNP Formulation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    GMP Production
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Analytics
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Resources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Webinars
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                    Press
-                  </Link>
-                </li>
-              </ul>
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} RNA Foundry, Inc. All rights reserved.
-            </p>
-            <div className="flex gap-6">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                Privacy
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                Terms
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                Cookies
-              </Link>
+        {/* sixth section: Image on the Left */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Advanced mRNA-LNP Development
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        Our expert process development team specializes in optimizing mRNA-LNP formulations using our advanced platform technology. We ensure high yield, purity, functionality, and quality to deliver superior results.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* seventh Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  End-to-End GMP Manufacturing
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        We have a fully integrated GMP facility with ISO 7/8 cleanrooms, equipped with qualified manufacturing systems for end-to-end mRNA-LNP production, from pDNA synthesis to LNP encapsulation. Designed based on a successful pre-IND consultation with the FDA, our facility ensures compliance with regulatory expectations.
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">We are also expanding to include a small-scale fill-and-finish unit, expected to be operational by the end of this year. Our GMP facility currently has an annual production capacity of 1 million doses, with scalability to meet higher demand.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* eighth section: Image on the Left */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Comprehensive QC & Analytical Capabilities
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        Our QC release laboratory is equipped with key analytical instruments for mRNA-LNP products, including multiple HPLCs with PDA, UV, ELSD, and CAD detectors, a high-resolution mass spectrometer (Q-TOF), a DLS instrument, a multimodal plate reader, and a dedicated cell culture lab.
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">We have developed assays for all critical quality attributes for mRNA-LNP, with the capability to rapidly adapt them to new products, including your molecules.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ninth Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Pioneering AI-Driven mRNA Vaccines
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        We are a Gates Foundation-funded biotech company in India, focused on developing broadly protective mRNA vaccines through generative AI-driven computational protein design. Our team of 70+ experts works at the RNA Foundry, our integrated R&D and cGMP-ready clinical production facility in Hyderabad.
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">Our lead program targets influenza, with our seasonal flu vaccine design showing strong immune responses, eliciting as much as 250-fold higher immune responses. This progress helped us win the first stage of the U.S. Biomedical Advanced Research and Development Authority's (BARDA) Patch Forward Prize, earning a $2M award from the U.S. Government.</h3>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">PopVax is committed to advancing innovative vaccines to address global infectious diseases and improve public health.
+</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=500&width=600"
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+{/* Tenth Section: Timeline & Cost */}
+<section className="py-16 md:py-24 bg-white">
+  <div className="container">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8">
+        Timeline & Cost
+      </h2>
+      <p className="text-xl text-muted-foreground mb-8">
+        Our end-to-end service takes approximately <strong>2 years</strong> to deliver a Phase I-ready GMP batch of clinical doses. Below is a high-level timeline and cost breakdown:
+      </p>
+
+      {/* Placeholder for Gantt Chart */}
+      <div className="mb-12">
+        <Image
+          src="/placeholder.svg?height=300&width=800"
+          width={800}
+          height={300}
+          alt="Timeline Gantt Chart"
+          className="rounded-lg object-cover mx-auto"
+        />
+        <p className="text-sm text-muted-foreground mt-2">
+          *Gantt chart illustrating the 2-year timeline for end-to-end service.
+        </p>
+      </div>
+
+      {/* Cost Details */}
+      <div className="space-y-6 text-left max-w-2xl mx-auto">
+        <div className="flex gap-4">
+          <div className="rounded-full bg-primary/10 p-2 h-fit">
+            <svg
+              className="h-5 w-5 text-primary"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl text-muted-foreground">
+              <strong>Service Fee:</strong> $10 million for end-to-end service, covering everything from sequence design to GMP manufacturing.
+            </h3>
           </div>
         </div>
-      </footer>
-    </div>
-  )
-}
 
+        <div className="flex gap-4">
+          <div className="rounded-full bg-primary/10 p-2 h-fit">
+            <svg
+              className="h-5 w-5 text-primary"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl text-muted-foreground">
+              <strong>Royalty:</strong> 4% royalty on net sales for use of our platform.
+            </h3>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="rounded-full bg-primary/10 p-2 h-fit">
+            <svg
+              className="h-5 w-5 text-primary"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-xl text-muted-foreground">
+              <strong>Milestones:</strong> Additional milestone payments tied to key achievements, such as IND approval and Phase I completion.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+    </div>
+  );
+}
