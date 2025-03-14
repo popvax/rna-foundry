@@ -20,12 +20,6 @@ export default function Home() {
               <Link href="/solutions" className="text-sm font-medium hover:text-primary">
                 Solutions <ChevronRight className="inline h-4 w-4" />
               </Link>
-              <Link href="/technology" className="text-sm font-medium hover:text-primary">
-                Technology <ChevronRight className="inline h-4 w-4" />
-              </Link>
-              <Link href="/pricing" className="text-sm font-medium hover:text-primary">
-                Pricing
-              </Link>
             </nav>
 
           </div>
