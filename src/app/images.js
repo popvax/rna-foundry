@@ -1,0 +1,11 @@
+export { default as img1 } from "./mRNA_engg.png";
+export { default as img2 } from "./Custom_mRNA-LNP_Formulation.png";
+export { default as img3 } from "./adv_lipid_inv.png";
+export { default as img4 } from "./adv_mrnalnp_prodev.png";
+export { default as img5 } from "./endtoend_gmp.png";
+export { default as img6 } from "./gmp_partner_vendors.png";
+export { default as img7 } from "./cqc_1.png";
+export { default as img8 } from "./cqc_2.png";
+export { default as img9 } from "./endtoend_gmp2.png";
+export { default as img10} from "./AI.png";
+export { default as img11} from "./pvx_best.png";

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Dna, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11 } from "./images";
 
 export default function Home() {
   return (
@@ -18,10 +19,6 @@ export default function Home() {
             </div>
           </Link>
         </div>
-
-          <div className="flex items-center gap-4">
-            <Button>Get started</Button>
-          </div>
         </div>
       </header>
 
@@ -61,7 +58,7 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={img1}
                   width={600}
                   height={500}
                   alt="RNA manufacturing process"
@@ -164,7 +161,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={img3}
                   width={600}
                   height={500}
                   alt="RNA manufacturing process"
@@ -181,7 +178,7 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={img2}
                   width={600}
                   height={500}
                   alt="RNA manufacturing process"
@@ -265,7 +262,7 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={img4}
                   width={600}
                   height={500}
                   alt="RNA manufacturing process"
@@ -274,7 +271,7 @@ export default function Home() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                  Advanced mRNA-LNP Development
+                  Advanced mRNA-LNP Process Development
                 </h2>
                 <div className="space-y-6">
                   <div className="flex gap-4">
@@ -349,7 +346,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={img5}
                   width={600}
                   height={500}
                   alt="RNA manufacturing process"
@@ -360,22 +357,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* eighth section: Image on the Left */}
-        <section className="py-16 md:py-24 bg-white">
+        {/* seventh Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
           <div className="container">
             <div className="grid gap-12 lg:grid-cols-2">
-              <div className="relative">
-                <Image
-                  src="/placeholder.svg?height=500&width=600"
-                  width={600}
-                  height={500}
-                  alt="RNA manufacturing process"
-                  className="rounded-lg object-cover"
-                />
-              </div>
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                  Comprehensive QC & Analytical Capabilities
+                  End-to-End GMP Manufacturing
                 </h2>
                 <div className="space-y-6">
                   <div className="flex gap-4">
@@ -392,7 +380,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl text-muted-foreground">
-                        Our QC release laboratory is equipped with key analytical instruments for mRNA-LNP products, including multiple HPLCs with PDA, UV, ELSD, and CAD detectors, a high-resolution mass spectrometer (Q-TOF), a DLS instrument, a multimodal plate reader, and a dedicated cell culture lab.
+                        We have a fully integrated GMP facility with ISO 7/8 cleanrooms, equipped with qualified manufacturing systems for end-to-end mRNA-LNP production, from pDNA synthesis to LNP encapsulation. Designed based on a successful pre-IND consultation with the FDA, our facility ensures compliance with regulatory expectations.
                       </h3>
                     </div>
                   </div>
@@ -410,7 +398,60 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl text-muted-foreground">We have developed assays for all critical quality attributes for mRNA-LNP, with the capability to rapidly adapt them to new products, including your molecules.</h3>
+                      <h3 className="text-xl text-muted-foreground">We are also expanding to include a small-scale fill-and-finish unit, expected to be operational by the end of this year. Our GMP facility currently has an annual production capacity of 1 million doses, with scalability to meet higher demand.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src={img9}
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* eigth section: Image on the Left */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="relative">
+                <Image
+                  src={img6}
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  GMP-Partner vendors
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        We have established relationships with reputable GMP-material vendors for all our components, as well as have alternatives and more cost-effective options for most of them. 
+Our average lead time is 45 days from order to receipt while ensuring temperature-monitored shipping.
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -425,7 +466,7 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                  Pioneering AI-Driven mRNA Vaccines
+                  Comprehensive Quality Control
                 </h2>
                 <div className="space-y-6">
                   <div className="flex gap-4">
@@ -442,7 +483,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl text-muted-foreground">
-                        We are a Gates Foundation-funded biotech company in India, focused on developing broadly protective mRNA vaccines through generative AI-driven computational protein design. Our team of 70+ experts works at the RNA Foundry, our integrated R&D and cGMP-ready clinical production facility in Hyderabad.
+                        Our QC release laboratory is equipped with key analytical instruments for mRNA-LNP products, including multiple HPLCs with PDA, UV, ELSD, and CAD detectors, a high-resolution mass spectrometer (Q-TOF), NGS sequencer, a DLS instrument, a multimodal plate reader, and a dedicated cell culture lab.
                       </h3>
                     </div>
                   </div>
@@ -460,7 +501,49 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl text-muted-foreground">Our lead program targets influenza, with our seasonal flu vaccine design showing strong immune responses, eliciting as much as 250-fold higher immune responses. This progress helped us win the first stage of the U.S. Biomedical Advanced Research and Development Authority's (BARDA) Patch Forward Prize, earning a $2M award from the U.S. Government.</h3>
+                      <h3 className="text-xl text-muted-foreground">We have developed assays for all critical quality attributes for mRNA-LNP, with the capability to rapidly adapt them to new products.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src={img7}
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ninth Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  Comprehensive Quality Control
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        Our QC release laboratory is equipped with key analytical instruments for mRNA-LNP products, including multiple HPLCs with PDA, UV, ELSD, and CAD detectors, a high-resolution mass spectrometer (Q-TOF), NGS sequencer, a DLS instrument, a multimodal plate reader, and a dedicated cell culture lab.
+                      </h3>
                     </div>
                   </div>
 
@@ -477,15 +560,118 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl text-muted-foreground">PopVax is committed to advancing innovative vaccines to address global infectious diseases and improve public health.
-</h3>
+                      <h3 className="text-xl text-muted-foreground">We have developed assays for all critical quality attributes for mRNA-LNP, with the capability to rapidly adapt them to new products.</h3>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={img8}
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* eigth section: Image on the Left */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="relative">
+                <Image
+                  src={img10}
+                  width={600}
+                  height={500}
+                  alt="RNA manufacturing process"
+                  className="rounded-lg object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  PopVax is pioneering AI-driven mRNA vaccines using RNA Foundry
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        We are a Gates Foundation-funded biotech company, focused on developing broadly protective mRNA vaccines through generative AI-driven computational protein design. Our team of 70+ experts works at the RNA Foundry, our integrated R&D and cGMP-clinical production facility in Hyderabad.
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">PopVax is committed to advancing innovative vaccines to address global infectious diseases and improve public health.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        {/* ninth Section: Image on the Right */}
+        <section className="py-16 md:py-24 bg-blue-50">
+          <div className="container">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                  PopVax’s Best-in Class Seasonal Influenza Vaccine Design
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="rounded-full bg-primary/10 p-2 h-fit">
+                      <svg
+                        className="h-5 w-5 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-muted-foreground">
+                        Our lead program targets influenza, with our seasonal flu vaccine design showing strong immune responses, eliciting as much as 250-fold higher immune responses. This progress helped us win the first stage of the U.S. Biomedical Advanced Research and Development Authority's (BARDA) Patch Forward Prize, earning a $2M award from the U.S. Government.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src={img11}
                   width={600}
                   height={500}
                   alt="RNA manufacturing process"
@@ -583,6 +769,7 @@ export default function Home() {
     </div>
   </div>
 </section>
+
 
       </main>
     </div>
