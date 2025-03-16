@@ -13,11 +13,13 @@
     "@shadcn/ui": "^0.0.4",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
+    "country-list": "^2.3.0",
     "framer-motion": "^12.4.4",
     "lucide-react": "^0.476.0",
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-select": "^5.10.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -1,3 +1,7 @@
+"use client"; // Add this directive at the top of the file
+
+import { useState } from "react";
+import ContactForm from "./ContactForm";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Dna, ChevronRight } from "lucide-react";
@@ -5,6 +9,8 @@ import Image from "next/image";
 import { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11 } from "./images";
 
 export default function Home() {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="border-b">
@@ -770,7 +776,20 @@ Our average lead time is 45 days from order to receipt while ensuring temperatur
   </div>
 </section>
 
+          
+      {/* Add a Contact Us button */}
+      <button
+        onClick={() => setIsContactFormOpen(true)}
+        className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-blue-900 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+      >
+        Contact Us
+      </button>
 
+      {/* Render the Contact Form as a popup */}
+      {isContactFormOpen && (
+        <ContactForm onClose={() => setIsContactFormOpen(false)} />
+      )}
+    
       </main>
     </div>
   );
