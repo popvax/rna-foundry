@@ -1,8 +1,9 @@
-let userConfig = undefined
+let userConfig: Record<string, unknown> | undefined = undefined;
+
 try {
-  userConfig = await import('./v0-user-next.config')
+  userConfig = await import("./v0-user-next.config");
 } catch (e) {
-  // ignore error
+  // eslint-disable-next-line no-empty
 }
 
 /** @type {import('next').NextConfig} */
@@ -11,7 +12,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // ✅ Ignores TypeScript errors but allows valid ones
   },
   images: {
     unoptimized: true,
@@ -21,28 +22,32 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-}
+};
 
-mergeConfig(nextConfig, userConfig)
+// Ensure TypeScript doesn't complain about `userConfig`
+mergeConfig(nextConfig, userConfig);
 
-function mergeConfig(nextConfig, userConfig) {
+function mergeConfig(
+  nextConfig: Record<string, unknown>,
+  userConfig: Record<string, unknown> | undefined
+) {
   if (!userConfig) {
-    return
+    return;
   }
 
   for (const key in userConfig) {
     if (
-      typeof nextConfig[key] === 'object' &&
+      typeof nextConfig[key] === "object" &&
       !Array.isArray(nextConfig[key])
     ) {
       nextConfig[key] = {
-        ...nextConfig[key],
-        ...userConfig[key],
-      }
+        ...(nextConfig[key] as Record<string, unknown>),
+        ...(userConfig[key] as Record<string, unknown>),
+      };
     } else {
-      nextConfig[key] = userConfig[key]
+      nextConfig[key] = userConfig[key];
     }
   }
 }
 
-export default nextConfig
+export default nextConfig;
