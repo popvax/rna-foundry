@@ -670,7 +670,7 @@ Our average lead time is 45 days from order to receipt while ensuring temperatur
                     </div>
                     <div>
                       <h3 className="text-xl text-muted-foreground">
-                        Our lead program targets influenza, with our seasonal flu vaccine design showing strong immune responses, eliciting as much as 250-fold higher immune responses. This progress helped us win the first stage of the U.S. Biomedical Advanced Research and Development Authority's (BARDA) Patch Forward Prize, earning a $2M award from the U.S. Government.
+                        Our lead program targets influenza, with our seasonal flu vaccine design showing strong immune responses, eliciting as much as 250-fold higher immune responses. This progress helped us win the first stage of the U.S. Biomedical Advanced Research and Development Authority&apos;s (BARDA) Patch Forward Prize, earning a $2M award from the U.S. Government.
                       </h3>
                     </div>
                   </div>
