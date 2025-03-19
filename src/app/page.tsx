@@ -3,8 +3,9 @@
 import { useState } from "react";
 import ContactForm from "./ContactForm";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Dna, ChevronRight } from "lucide-react";
+//import { Button } from "@/components/ui/button";
+//import { Dna, ChevronRight } from "lucide-react";
+import { Dna } from "lucide-react";
 import Image from "next/image";
 import { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11 } from "./images";
 
@@ -35,7 +36,7 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-5xl">
-                  Give us a sequence, and we’ll take care of everything else
+                  Give us a sequence, and we&apos;ll take care of everything else
                 </h1>
                 <p className="max-w-[600px] text-xl text-muted-foreground">
                   The RNA Foundry works with researchers & biotechs to take their new mRNA biomedicines to clinical trial readiness end-to-end using PopVax’s mRNA-LNP and GMP platforms, starting with just the RNA sequence and ending with a Phase I-ready GMP batch of clinical doses, in 2 years.
